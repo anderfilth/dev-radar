@@ -6,6 +6,7 @@ class Database {
   }
 
   mongo() {
+    mongoose.set('useCreateIndex', true);
     this.mongoConnection = mongoose.connect(process.env.MONGO_URL, {
       useNewUrlParser: true,
       useUnifiedTopology: true,
